@@ -40,6 +40,19 @@ const Sidebar = () => {
         <img src={logo} alt="logo" className="w-full h-14 object-contain" />
         <NavLinks />
       </div>
+      <div className="absolute md:hidden block top-6 right-3">
+        {!mobileMenuOpen ? (
+          <HiOutlineMenu
+            className="w-6 h-6 mr-2 text-white"
+            onClick={() => setMobileMenuOpen(true)}
+          />
+        ) : (
+          <RiCloseLine
+            className="w-6 h-6 mr-2 text-white"
+            onClick={() => setMobileMenuOpen(false)}
+          />
+        )}
+      </div>
     </>
   );
 };
