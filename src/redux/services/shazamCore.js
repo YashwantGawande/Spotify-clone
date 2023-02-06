@@ -13,7 +13,10 @@ export const shazamCoreApi = createApi({
     },
   }),
   endpoints: (builder) => ({
-    getTopCharts: builder.query({ query: () => "/chart/albums/" }),
+    getTopCharts: builder.query({
+      query: () =>
+        "/chart/songs/?time_period=all_time&chart_genre=all&per_page=50&page=1",
+    }),
   }),
 });
 
