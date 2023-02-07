@@ -17,6 +17,10 @@ export const shazamCoreApi = createApi({
       query: () =>
         "/chart/songs/?time_period=all_time&chart_genre=all&per_page=50&page=1",
     }),
+    getTopCharts: builder.query({
+      query: () =>
+        "/chart/songs/?time_period=all_time&chart_genre=all&per_page=50&page=1",
+    }),
   }),
 });
 
